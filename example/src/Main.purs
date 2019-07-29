@@ -7,6 +7,7 @@ import Data.Tuple (Tuple(Tuple))
 import Effect (Effect)
 import Effect.Aff (Aff)
 import Example.Uncontrolled as ExpUncontrolled
+import Example.Controlled as ExpControlled
 import Foreign.Object as Object
 import Halogen.Aff as HA
 import Halogen.Storybook (Stories, runStorybook, proxy)
@@ -14,6 +15,7 @@ import Halogen.Storybook (Stories, runStorybook, proxy)
 stories :: Stories Aff
 stories = Object.fromFoldable
   [ Tuple "Uncontrolled" $ proxy ExpUncontrolled.component
+  , Tuple "Controlled" $ proxy ExpControlled.component
   ]
 
 main :: Effect Unit

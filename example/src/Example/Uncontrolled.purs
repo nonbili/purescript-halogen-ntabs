@@ -70,6 +70,12 @@ render state =
     , initial: 0
     , value: Nothing
     } $ const Nothing
+  , HH.div
+    [ class_ "mt-4"]
+    [ HH.div
+      [ class_ "mb-1"]
+      [ HH.text "Tabs manage its own state."]
+    ]
   ]
 
 component :: H.Component HH.HTML Query Unit Void Aff

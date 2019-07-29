@@ -42,7 +42,7 @@ type State v m =
 initialState :: forall v m. Props v m -> State v m
 initialState props =
   { props
-  , value: props.initial
+  , value: fromMaybe props.initial props.value
   }
 
 type TabProps r =
