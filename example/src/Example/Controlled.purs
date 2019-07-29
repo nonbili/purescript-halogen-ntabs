@@ -15,7 +15,7 @@ import NTabs as Tabs
 type Query = Const Void
 
 data Action
-  = HandleTabs (Tabs.Message Tab)
+  = HandleTabChange (Tabs.Message Tab)
   | OnSelectTab Tab
 
 data Tab
@@ -78,7 +78,7 @@ render state =
     { render: renderTabs
     , initial: TabX
     , value: Just state.tab
-    } $ Just <<< HandleTabs
+    } $ Just <<< HandleTabChange
   , HH.div
     [ class_ "mt-4"]
     [ HH.div
@@ -106,7 +106,6 @@ component = H.mkComponent
   }
   where
   handleAction = case _ of
-    HandleTabs msg -> case msg of
-      Tabs.Changed tab -> H.modify_ $ _ { tab = tab }
+    HandleTabChange tab -> H.modify_ $ _ { tab = tab }
 
     OnSelectTab tab -> H.modify_ $ _ { tab = tab }

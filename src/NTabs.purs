@@ -22,7 +22,7 @@ type Props v m =
   , value :: Maybe v
   }
 
-data Message v = Changed v
+type Message v = v
 
 type Query = Const Void
 
@@ -79,7 +79,7 @@ handleAction :: forall v m. Action v m -> DSL v m Unit
 handleAction = case _ of
   OnClick value -> do
     H.modify_ $ _ { value = value }
-    H.raise $ Changed value
+    H.raise value
 
   Receive props -> do
     H.modify_ \s -> s
