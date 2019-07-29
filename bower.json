@@ -1,0 +1,25 @@
+{
+  "name": "purescript-halogen-ntabs",
+  "description": "a Nonbili tabs library in purescript halogen",
+  "authors": [
+    "Ping Chen <remotenonsense@gmail.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nonbili/purescript-halogen-ntabs.git"
+  },
+  "license": "BSD-3-Clause",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "output"
+  ],
+  "dependencies": {
+    "purescript-halogen": "^5.0.0-rc.4"
+  },
+  "devDependencies": {
+    "purescript-psci-support": "^4.0.0",
+    "purescript-debug": "^4.0.0"
+  }
+}
