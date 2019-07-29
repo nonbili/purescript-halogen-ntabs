@@ -1,0 +1,17 @@
+{
+  "name": "example",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "output"
+  ],
+  "dependencies": {
+    "purescript-halogen-storybook": "https://github.com/rnons/purescript-halogen-storybook.git#0627e1a3b0aa2116c1849eaa2d1b7604156afffb"
+  },
+  "devDependencies": {
+    "purescript-psci-support": "^4.0.0",
+    "purescript-debug": "^4.0.0"
+  }
+}
